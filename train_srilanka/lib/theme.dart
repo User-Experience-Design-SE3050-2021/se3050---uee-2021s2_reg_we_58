@@ -15,6 +15,12 @@ const kDefaultPadding = EdgeInsets.symmetric(horizontal: 30);
 TextStyle titleText =
     TextStyle(color: textColorBlue, fontSize: 32, fontWeight: FontWeight.w700);
 
+TextStyle NText = TextStyle(
+  color: textColorBlue,
+  fontSize: 26,
+  fontWeight: FontWeight.w700,
+);
+
 TextStyle subTitle =
     TextStyle(color: textColorBlack, fontSize: 16, fontWeight: FontWeight.w500);
 

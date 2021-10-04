@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/theme.dart';
 
-void main() {
-  runApp(LogInScreen());
-}
+import '../home_page.dart';
+import 'register.dart';
 
 class LogInScreen extends StatelessWidget {
+  const LogInScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,7 +33,6 @@ class LogInScreen extends StatelessWidget {
                   child: TextField(
                     decoration: InputDecoration(
                         border: InputBorder.none, hintText: 'Email'),
-                    style: subTitle,
                     keyboardType: TextInputType.emailAddress,
                     textInputAction: TextInputAction.next,
                   ),
@@ -62,34 +62,41 @@ class LogInScreen extends StatelessWidget {
             ),
             Container(
               height: 50,
-              width: 300.0,
+              width: 400,
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: textColorBlue),
               child: FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => RegScreen()));
+                },
                 child: Text(
                   'SUBMIT',
                   style: textButton,
                 ),
               ),
             ),
-            Card(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.email,
-                    color: Colors.blueGrey[900],
-                  ),
-                  title: Text('rikasrkf@gmail.com',
-                      style: TextStyle(
-                        color: Colors.blueGrey[900],
-                        fontFamily: 'SourceSansPro',
-                        fontSize: 20.0,
-                      )),
-                )),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Text("New here ?"),
+                Text("Create a new account",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                    )),
+              ],
+            ),
+            // Flexible(
+            //   flex: 4,
+            //   child: Container(
+            //     color: Colors.orangeAccent,
+            //     // height: 20,
+            //   ),
+            // ),
             Container(
               height: 50,
               width: 300.0,
@@ -98,12 +105,22 @@ class LogInScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   color: textColorBlack),
               child: FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Homepage()));
+                },
                 child: Text(
                   'CONTINUE AS A GUEST',
                   style: textButton,
                 ),
               ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 50.0),
+              height: MediaQuery.of(context).size.height / 10,
+              decoration: BoxDecoration(
+                  image:
+                      DecorationImage(image: AssetImage('Assets/footer.png'))),
             ),
           ],
         )),

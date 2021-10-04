@@ -30,6 +30,8 @@ flutter:
 
   assets:
     - Assets/Train.png
+    - Assets/Tf.png
+    - Assets/footer.png
 
   fonts:
     - family: Poppins
