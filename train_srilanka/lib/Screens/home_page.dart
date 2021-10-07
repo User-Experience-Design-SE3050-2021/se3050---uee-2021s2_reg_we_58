@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:train_srilanka/widgets/custome_appbar.dart';
 import 'package:train_srilanka/widgets/navbar.dart';
 
 import '../theme.dart';
@@ -9,9 +11,7 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavDrawer(),
-      appBar: AppBar(
-        title: Text('TRAINS SRI LANKA'),
-      ),
+      appBar: CustomAppBar(),
       body: Center(
         child: Text('Home Screen'),
       ),
