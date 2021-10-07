@@ -10,7 +10,7 @@ class RegScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
           child: Container(
         width: double.infinity,
@@ -20,6 +20,9 @@ class RegScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            SizedBox(
+              height: 40,
+            ),
             Column(
               children: <Widget>[
                 Text(
@@ -155,20 +158,26 @@ class RegScreen extends StatelessWidget {
               ),
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Text("Already have an account?"),
-                Text(" Log in",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                    )),
+                Padding(
+                  padding: const EdgeInsets.only(right: 20.0),
+                  child: Text(" Log in",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                      )),
+                ),
               ],
+            ),
+            SizedBox(
+              height: 30,
             ),
             Container(
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 0),
-              height: MediaQuery.of(context).size.height / 10,
+              height: MediaQuery.of(context).size.height / 12,
               decoration: BoxDecoration(
                   image:
                       DecorationImage(image: AssetImage('Assets/footer.png'))),

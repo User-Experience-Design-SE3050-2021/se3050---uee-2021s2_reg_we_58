@@ -18,7 +18,7 @@ class LogInScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(
-              height: 100.0,
+              height: 180.0,
             ),
             Text(
               'LOGIN',
@@ -106,7 +106,7 @@ class LogInScreen extends StatelessWidget {
             //   ),
             // ),
             SizedBox(
-              height: 200.0,
+              height: 120.0,
             ),
             Container(
               // padding: EdgeInsets.only(top: 100),
