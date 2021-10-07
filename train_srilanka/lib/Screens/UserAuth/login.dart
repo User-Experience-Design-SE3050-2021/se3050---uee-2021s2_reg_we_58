@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/theme.dart';
+import 'package:train_srilanka/widgets/NavDrawer.dart';
 
 import '../home_page.dart';
 import 'register.dart';
