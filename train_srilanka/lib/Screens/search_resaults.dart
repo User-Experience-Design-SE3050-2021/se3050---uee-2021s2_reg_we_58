@@ -13,7 +13,7 @@ class Homepage extends StatelessWidget {
         title: Text('TRAINS SRI LANKA'),
       ),
       body: Center(
-        child: Text('Home Screen'),
+        child: Text('Search screen'),
       ),
     );
   }

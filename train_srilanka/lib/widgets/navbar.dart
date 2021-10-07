@@ -1,19 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:train_srilanka/Screens/UserAuth/login.dart';
+import 'package:train_srilanka/Screens/UserAuth/register.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        padding: EdgeInsets.zero,
-        children: <Widget>[
-          DrawerHeader(
-            child: Text(
-              'Side menu',
-              style: TextStyle(color: Colors.white, fontSize: 25),
-            ),
+        children: [
+          UserAccountsDrawerHeader(
+            accountName: Text('Rikas'),
+            accountEmail: Text('rikasrkf@gmail.com'),
+            currentAccountPicture: CircleAvatar(
+                // child: ClipOval(
+                //   child: Image.network(
+                //     'https://oflutter.com/wp-content/uploads/2021/02/girl-profile.png',
+                //     fit: BoxFit.cover,
+                //     width: 90,
+                //     height: 90,
+                //   ),
+                // ),
+                ),
             decoration: BoxDecoration(
-              color: Colors.blueAccent,
+              color: Colors.blue,
             ),
           ),
           ListTile(
@@ -56,6 +65,13 @@ class NavDrawer extends StatelessWidget {
             title: Text('History'),
             onTap: () => {Navigator.of(context).pop()},
           ),
+          SizedBox(
+            height: 30.0,
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 20,
+          ),
           ListTile(
             leading: Icon(Icons.settings),
             title: Text('Settings'),
@@ -64,7 +80,11 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Logout'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.of(context).pop(),
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => LogInScreen()))
+            },
           ),
         ],
       ),

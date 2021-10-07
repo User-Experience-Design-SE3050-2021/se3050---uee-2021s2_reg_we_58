@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/theme.dart';
-import 'package:train_srilanka/widgets/NavDrawer.dart';
+import 'package:train_srilanka/widgets/navbar.dart';
 
 import '../home_page.dart';
 import 'register.dart';
@@ -12,10 +12,14 @@ class LogInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: SafeArea(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(
+              height: 100.0,
+            ),
             Text(
               'LOGIN',
               style: titleText,
@@ -80,15 +84,18 @@ class LogInScreen extends StatelessWidget {
               ),
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                Text("New here ?"),
-                Text("Create a new account",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                    )),
+                Text("New here ?   "),
+                Padding(
+                  padding: const EdgeInsets.only(right: 30.0),
+                  child: Text("Create a new account",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                      )),
+                ),
               ],
             ),
             // Flexible(
@@ -98,7 +105,11 @@ class LogInScreen extends StatelessWidget {
             //     // height: 20,
             //   ),
             // ),
+            SizedBox(
+              height: 200.0,
+            ),
             Container(
+              // padding: EdgeInsets.only(top: 100),
               height: 50,
               width: 300.0,
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
