@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/Screens/UserAuth/login.dart';
 import 'package:train_srilanka/Screens/UserAuth/register.dart';
+import 'package:train_srilanka/Screens/search_resaults.dart';
+import 'package:train_srilanka/Screens/station_shedule.dart';
+import 'package:train_srilanka/Screens/train_shedule.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -28,7 +31,11 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.perm_identity),
             title: Text('Home'),
-            onTap: () => {},
+            onTap: () => {
+              Navigator.of(context).pop(),
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SearchResault()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.account_balance),
@@ -38,12 +45,20 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.phone),
             title: Text('Trains'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.of(context).pop(),
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => TrainShedule()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.transfer_within_a_station),
             title: Text('Stations'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.of(context).pop(),
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => StationShedule()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.person_outline),

@@ -46,7 +46,28 @@ class RegScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: TextField(
                     decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Password'),
+                        border: InputBorder.none, hintText: 'Full Name'),
+                    obscureText: true,
+                    style: subTitle,
+                    keyboardType: TextInputType.name,
+                    textInputAction: TextInputAction.next,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0),
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        border: InputBorder.none, hintText: 'Email'),
                     obscureText: true,
                     style: subTitle,
                     keyboardType: TextInputType.name,
@@ -88,7 +109,7 @@ class RegScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: TextField(
                     decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Password'),
+                        border: InputBorder.none, hintText: 'Mobile'),
                     obscureText: true,
                     style: subTitle,
                     keyboardType: TextInputType.name,
@@ -109,28 +130,7 @@ class RegScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: TextField(
                     decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Password'),
-                    obscureText: true,
-                    style: subTitle,
-                    keyboardType: TextInputType.name,
-                    textInputAction: TextInputAction.next,
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0),
-              height: 50,
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Password'),
+                        border: InputBorder.none, hintText: 'City'),
                     obscureText: true,
                     style: subTitle,
                     keyboardType: TextInputType.name,
