@@ -58,132 +58,61 @@ class SearchResault extends StatelessWidget {
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     ),
                     Text(
-                      'In : Colombo Fort',
+                      'Option 1',
                       style: TextStyle(),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 28.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 50.0),
                     ),
                     Text(
-                      'Out: : Jaffna',
+                      '6h 6m',
                       style: TextStyle(),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 85.0),
+                    ),
+                    Icon(
+                      Icons.share,
+                      size: 24.0,
+                      semanticLabel: 'Text to announce in accessibility modes',
                     ),
                   ],
                 ),
-                const ListTile(
+                ListTile(
                   leading: Icon(Icons.train),
                   title: Text('Yal Devi (Kankasanthurai)'),
                   // subtitle: Text('In : Colombo Fort '),
                   trailing: Icon(Icons.more_vert),
+                  onTap: () => {
+                    Navigator.of(context).pop(),
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SearchResault()))
+                  },
                 ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                PopupMenuButton(
+                  icon: Icon(Icons.more_vert),
+                  itemBuilder: (BuildContext context) => <PopupMenuEntry>[
+                    const PopupMenuItem(
+                      child: ListTile(
+                        leading: Icon(Icons.train),
+                        title: Text('View Train Schedule'),
+                      ),
                     ),
-                    Text(
-                      'In : Colombo Fort',
-                      style: TextStyle(),
+                    const PopupMenuDivider(),
+                    const PopupMenuItem(
+                      child: ListTile(
+                        leading: Icon(Icons.account_balance),
+                        title: Text('View Station Schedule'),
+                      ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 28.0),
-                    ),
-                    Text(
-                      'Out: : Jaffna',
-                      style: TextStyle(),
-                    ),
+                    // const PopupMenuItem(child: Text('Item A')),
+                    // const PopupMenuItem(child: Text('Item B')),
                   ],
-                ),
-                Row(
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                    ),
-                    Text(
-                      'At : 06.15 PM',
-                      style: TextStyle(),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                    ),
-                    Text(
-                      'At : 02.35 AM',
-                      style: TextStyle(),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 10.0,
-                )
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                const ListTile(
-                  leading: Icon(Icons.train),
-                  title: Text('Yal Devi (Kankasanthurai)'),
-                  // subtitle: Text('In : Colombo Fort '),
-                  trailing: Icon(Icons.more_vert),
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                    ),
-                    Text(
-                      'In : Colombo Fort',
-                      style: TextStyle(),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 28.0),
-                    ),
-                    Text(
-                      'Out: : Jaffna',
-                      style: TextStyle(),
-                    ),
-                  ],
-                ),
-                Row(
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                    ),
-                    Text(
-                      'At : 06.15 PM',
-                      style: TextStyle(),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                    ),
-                    Text(
-                      'At : 02.35 AM',
-                      style: TextStyle(),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 10.0,
-                )
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                const ListTile(
-                  leading: Icon(Icons.train),
-                  title: Text('Yal Devi (Kankasanthurai)'),
-                  // subtitle: Text('In : Colombo Fort '),
-                  trailing: Icon(Icons.more_vert),
                 ),
                 Row(
                   children: [
