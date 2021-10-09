@@ -12,7 +12,7 @@ class EditTrip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavDrawer(),
+      // drawer: NavDrawer(),
       appBar: AppBar(
         title: Text('TRAINS SRI LANKA'),
       ),
