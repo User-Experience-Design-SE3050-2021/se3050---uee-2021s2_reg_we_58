@@ -4,11 +4,13 @@ const kPrimaryColor = Color(0xFF1B383A);
 const kSecondaryColor = Color(0xFF59706F);
 const kDarkGreyColor = Color(0xFFA8A8A8);
 const kWhiteColor = Color(0xFFFFFFFF);
-const kZambeziColor = Color(0xFF5B5B5B);
+const kZambeziColor = Color(0xFF303030);
 const kBlackColor = Color(0xFF272726);
 const kTextFieldColor = Color(0xFF979797);
 const textColorBlue = Color(0xff0a8bc2);
 const textColorBlack = Color(0xff000000);
+const boxBlue = Color(0xFFB3E5FC);
+const boxBlue2 = Color(0xFFBBDEFB);
 
 const kDefaultPadding = EdgeInsets.symmetric(horizontal: 30);
 
@@ -30,8 +32,14 @@ TextStyle textButton = TextStyle(
   fontWeight: FontWeight.w700,
 );
 
-TextStyle NtextButton = TextStyle(
+TextStyle NButton = TextStyle(
   color: kWhiteColor,
-  fontSize: 14,
-  fontWeight: FontWeight.w200,
+  fontSize: 18,
+  fontWeight: FontWeight.w500,
+);
+
+TextStyle FButton = TextStyle(
+  color: kWhiteColor,
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
 );
