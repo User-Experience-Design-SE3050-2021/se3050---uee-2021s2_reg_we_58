@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/Screens/UserAuth/login.dart';
 import 'package:train_srilanka/Screens/UserAuth/register.dart';
+import 'package:train_srilanka/Screens/search_resaults.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -43,7 +44,11 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.transfer_within_a_station),
             title: Text('Stations'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.of(context).pop(),
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SearchResault()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.person_outline),

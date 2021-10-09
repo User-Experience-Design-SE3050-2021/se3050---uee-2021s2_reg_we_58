@@ -29,3 +29,9 @@ TextStyle textButton = TextStyle(
   fontSize: 18,
   fontWeight: FontWeight.w700,
 );
+
+TextStyle NtextButton = TextStyle(
+  color: kWhiteColor,
+  fontSize: 14,
+  fontWeight: FontWeight.w200,
+);
