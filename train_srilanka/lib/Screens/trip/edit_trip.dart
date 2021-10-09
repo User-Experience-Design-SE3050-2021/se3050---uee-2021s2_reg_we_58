@@ -8,7 +8,7 @@ import 'package:train_srilanka/widgets/navbar.dart';
 import '../UserAuth/register.dart';
 import '../home_page.dart';
 
-class AddTrip extends StatelessWidget {
+class EditTrip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -194,7 +194,7 @@ class AddTrip extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => ViewTrip()));
               },
               child: Text(
-                'Add',
+                'Save',
                 style: textButton,
               ),
             ),

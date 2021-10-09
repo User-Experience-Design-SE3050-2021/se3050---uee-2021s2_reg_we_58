@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/Screens/train_shedule.dart';
-import 'package:train_srilanka/Screens/trip/view_trip_planner.dart';
+import 'package:train_srilanka/Screens/trip/edit_trip.dart';
 import 'package:train_srilanka/theme.dart';
 import 'package:train_srilanka/widgets/navbar.dart';
 
 import '../UserAuth/register.dart';
 import '../home_page.dart';
 
-class AddTrip extends StatelessWidget {
+class ViewTrip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -150,33 +150,6 @@ class AddTrip extends StatelessWidget {
             ),
           ),
 
-          Card(
-            color: boxBlue2,
-            margin: const EdgeInsets.all(10.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                SizedBox(
-                  height: 10.0,
-                ),
-                Row(),
-                Container(
-                  height: 200,
-                  child: CupertinoDatePicker(
-                    mode: CupertinoDatePickerMode.date,
-                    initialDateTime: DateTime(1969, 1, 1),
-                    onDateTimeChanged: (DateTime newDateTime) {
-                      // Do something
-                    },
-                  ),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-              ],
-            ),
-          ),
-
           //ADD BUTTON
           SizedBox(
             height: 10.0,
@@ -191,10 +164,28 @@ class AddTrip extends StatelessWidget {
             child: FlatButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ViewTrip()));
+                    MaterialPageRoute(builder: (context) => Homepage()));
               },
               child: Text(
-                'Add',
+                'Delete',
+                style: textButton,
+              ),
+            ),
+          ),
+          Container(
+            // padding: EdgeInsets.only(top: 100),
+            height: 50,
+            width: 300.0,
+            margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 25.0),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10), color: textColorBlue),
+            child: FlatButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => EditTrip()));
+              },
+              child: Text(
+                'Update',
                 style: textButton,
               ),
             ),
