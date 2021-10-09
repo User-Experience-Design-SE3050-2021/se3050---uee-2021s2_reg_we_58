@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/Screens/UserAuth/login.dart';
 import 'package:train_srilanka/Screens/UserAuth/register.dart';
+import 'package:train_srilanka/Screens/search_history.dart';
 import 'package:train_srilanka/Screens/search_resaults.dart';
 import 'package:train_srilanka/Screens/station_shedule.dart';
 import 'package:train_srilanka/Screens/train_shedule.dart';
@@ -78,7 +79,11 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.history),
             title: Text('History'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.of(context).pop(),
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SearchHistory()))
+            },
           ),
           SizedBox(
             height: 30.0,
