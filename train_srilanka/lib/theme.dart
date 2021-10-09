@@ -43,3 +43,9 @@ TextStyle FButton = TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.w500,
 );
+
+TextStyle BButton = TextStyle(
+  color: textColorBlack,
+  fontSize: 18,
+  fontWeight: FontWeight.w500,
+);
