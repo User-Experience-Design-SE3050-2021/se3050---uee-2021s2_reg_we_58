@@ -9,7 +9,6 @@ class TrainShedule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavDrawer(),
       appBar: AppBar(
         title: Text('TRAINS SRI LANKA'),
       ),
