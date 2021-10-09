@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/Screens/UserAuth/login.dart';
 import 'package:train_srilanka/Screens/UserAuth/register.dart';
+import 'package:train_srilanka/Screens/favourite.dart';
 import 'package:train_srilanka/Screens/search_history.dart';
 import 'package:train_srilanka/Screens/search_resaults.dart';
 import 'package:train_srilanka/Screens/station_shedule.dart';
@@ -69,7 +70,11 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.star_rate),
             title: Text('Favourites'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.of(context).pop(),
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Favourites()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.map),
