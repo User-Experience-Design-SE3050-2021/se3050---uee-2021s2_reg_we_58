@@ -5,6 +5,7 @@ import 'package:train_srilanka/widgets/navbar.dart';
 
 import '../UserAuth/register.dart';
 import '../home_page.dart';
+import 'add_trip.dart';
 
 class TripPlanner extends StatelessWidget {
   @override
@@ -341,7 +342,7 @@ class TripPlanner extends StatelessWidget {
             child: FlatButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Homepage()));
+                    MaterialPageRoute(builder: (context) => AddTrip()));
               },
               child: Text(
                 'Add A Trip',
