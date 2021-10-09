@@ -6,6 +6,7 @@ import 'package:train_srilanka/Screens/search_history.dart';
 import 'package:train_srilanka/Screens/search_resaults.dart';
 import 'package:train_srilanka/Screens/station_shedule.dart';
 import 'package:train_srilanka/Screens/train_shedule.dart';
+import 'package:train_srilanka/Screens/trip/trip_planner.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -79,7 +80,11 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.map),
             title: Text('Trip Planner'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.of(context).pop(),
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => TripPlanner()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.history),
