@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:train_srilanka/Screens/station_shedule.dart';
 import 'package:train_srilanka/Screens/train_shedule.dart';
 import 'package:train_srilanka/theme.dart';
+import 'package:train_srilanka/widgets/custome_appbar.dart';
 import 'package:train_srilanka/widgets/navbar.dart';
 
 import 'UserAuth/register.dart';
@@ -12,9 +13,7 @@ class SearchResault extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavDrawer(),
-      appBar: AppBar(
-        title: Text('TRAINS SRI LANKA'),
-      ),
+      appBar: CustomAppBar(),
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
           child: Column(
