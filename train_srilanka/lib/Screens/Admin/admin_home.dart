@@ -4,6 +4,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:train_srilanka/widgets/custome_appbar.dart';
 import 'package:train_srilanka/widgets/navbar.dart';
+import 'package:train_srilanka/widgets/adminNavBar.dart';
 import 'package:intl/intl.dart';
 import '../../theme.dart';
 
@@ -24,7 +25,7 @@ class AdminHome extends StatelessWidget {
     ];
 
     return Scaffold(
-        drawer: NavDrawer(),
+        drawer: adminNavDrawer(),
         appBar: AppBar(
           title: Text('TRAINS SRI LANKA'),
         ),

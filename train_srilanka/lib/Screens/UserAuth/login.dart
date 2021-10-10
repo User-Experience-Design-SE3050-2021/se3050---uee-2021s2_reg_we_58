@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/theme.dart';
 import 'package:train_srilanka/widgets/navbar.dart';
-
+import 'package:train_srilanka/Screens/Admin/admin_home.dart';
 import '../home_page.dart';
 import 'register.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class LogInScreen extends StatelessWidget {
   const LogInScreen({Key? key}) : super(key: key);
@@ -84,6 +85,25 @@ class LogInScreen extends StatelessWidget {
                 ),
               ),
             ),
+            Container(
+              height: 50,
+              width: 400,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: textColorBlue),
+              child: FlatButton(
+                onPressed: () {
+                  showToast();
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AdminHome()));
+                },
+                child: Text(
+                  'Admin Login',
+                  style: textButton,
+                ),
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               mainAxisSize: MainAxisSize.max,
@@ -102,6 +122,7 @@ class LogInScreen extends StatelessWidget {
                     )),
               ],
             ),
+
             // Flexible(
             //   flex: 4,
             //   child: Container(
@@ -144,3 +165,10 @@ class LogInScreen extends StatelessWidget {
     );
   }
 }
+
+void showToast() => Fluttertoast.showToast(
+    msg: "Admin Login Successfull",
+    fontSize: 18,
+    backgroundColor: Colors.lightGreenAccent);
+
+void cancelToast() => Fluttertoast.cancel();
