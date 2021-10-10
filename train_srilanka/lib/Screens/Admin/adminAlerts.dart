@@ -10,6 +10,7 @@ import 'package:intl/intl.dart';
 import '../../theme.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 import 'package:date_field/date_field.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class AdminAlert extends StatelessWidget {
   DateTime? _dateTime;
@@ -123,8 +124,15 @@ class AdminAlert extends StatelessWidget {
                         trailing: PopupMenuButton(itemBuilder: (context) {
                           return [
                             PopupMenuItem(
-                                child: Text('Delete'), value: 'delete'),
-                            PopupMenuItem(child: Text('Edit'), value: 'Edit'),
+                              child: Text('Delete'),
+                              value: 'delete',
+                              onTap: showToastDelete,
+                            ),
+                            PopupMenuItem(
+                              child: Text('Edit'),
+                              value: 'Edit',
+                              onTap: showToastUpdate,
+                            ),
                           ];
                         }),
                       ))
@@ -146,8 +154,15 @@ class AdminAlert extends StatelessWidget {
                         trailing: PopupMenuButton(itemBuilder: (context) {
                           return [
                             PopupMenuItem(
-                                child: Text('Delete'), value: 'delete'),
-                            PopupMenuItem(child: Text('Edit'), value: 'Edit'),
+                              child: Text('Delete'),
+                              value: 'delete',
+                              onTap: showToastDelete,
+                            ),
+                            PopupMenuItem(
+                              child: Text('Edit'),
+                              value: 'Edit',
+                              onTap: showToastUpdate,
+                            ),
                           ];
                         }),
                       ))
@@ -169,8 +184,15 @@ class AdminAlert extends StatelessWidget {
                         trailing: PopupMenuButton(itemBuilder: (context) {
                           return [
                             PopupMenuItem(
-                                child: Text('Delete'), value: 'delete'),
-                            PopupMenuItem(child: Text('Edit'), value: 'Edit'),
+                              child: Text('Delete'),
+                              value: 'delete',
+                              onTap: showToastDelete,
+                            ),
+                            PopupMenuItem(
+                              child: Text('Edit'),
+                              value: 'Edit',
+                              onTap: showToastUpdate,
+                            ),
                           ];
                         }),
                       ))
@@ -192,8 +214,15 @@ class AdminAlert extends StatelessWidget {
                         trailing: PopupMenuButton(itemBuilder: (context) {
                           return [
                             PopupMenuItem(
-                                child: Text('Delete'), value: 'delete'),
-                            PopupMenuItem(child: Text('Edit'), value: 'Edit'),
+                              child: Text('Delete'),
+                              value: 'delete',
+                              onTap: showToastDelete,
+                            ),
+                            PopupMenuItem(
+                              child: Text('Edit'),
+                              value: 'Edit',
+                              onTap: showToastUpdate,
+                            ),
                           ];
                         }),
                       ))
@@ -215,8 +244,15 @@ class AdminAlert extends StatelessWidget {
                         trailing: PopupMenuButton(itemBuilder: (context) {
                           return [
                             PopupMenuItem(
-                                child: Text('Delete'), value: 'delete'),
-                            PopupMenuItem(child: Text('Edit'), value: 'Edit'),
+                              child: Text('Delete'),
+                              value: 'delete',
+                              onTap: showToastDelete,
+                            ),
+                            PopupMenuItem(
+                              child: Text('Edit'),
+                              value: 'Edit',
+                              onTap: showToastUpdate,
+                            ),
                           ];
                         }),
                       ))
@@ -238,8 +274,15 @@ class AdminAlert extends StatelessWidget {
                         trailing: PopupMenuButton(itemBuilder: (context) {
                           return [
                             PopupMenuItem(
-                                child: Text('Delete'), value: 'delete'),
-                            PopupMenuItem(child: Text('Edit'), value: 'Edit'),
+                              child: Text('Delete'),
+                              value: 'delete',
+                              onTap: showToastDelete,
+                            ),
+                            PopupMenuItem(
+                              child: Text('Edit'),
+                              value: 'Edit',
+                              onTap: showToastUpdate,
+                            ),
                           ];
                         }),
                       ))
@@ -261,8 +304,15 @@ class AdminAlert extends StatelessWidget {
                         trailing: PopupMenuButton(itemBuilder: (context) {
                           return [
                             PopupMenuItem(
-                                child: Text('Delete'), value: 'delete'),
-                            PopupMenuItem(child: Text('Edit'), value: 'Edit'),
+                              child: Text('Delete'),
+                              value: 'delete',
+                              onTap: showToastDelete,
+                            ),
+                            PopupMenuItem(
+                              child: Text('Edit'),
+                              value: 'Edit',
+                              onTap: showToastUpdate,
+                            ),
                           ];
                         }),
                       ))
@@ -271,3 +321,15 @@ class AdminAlert extends StatelessWidget {
             ])));
   }
 }
+
+void showToastDelete() => Fluttertoast.showToast(
+    msg: "Alert Delete Successfull",
+    fontSize: 18,
+    backgroundColor: Colors.redAccent);
+
+void showToastUpdate() => Fluttertoast.showToast(
+    msg: "Alert Update Successfull",
+    fontSize: 18,
+    backgroundColor: Colors.blue);
+
+void cancelToast() => Fluttertoast.cancel();

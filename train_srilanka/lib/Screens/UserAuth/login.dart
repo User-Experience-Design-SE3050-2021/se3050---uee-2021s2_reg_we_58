@@ -4,6 +4,7 @@ import 'package:train_srilanka/widgets/navbar.dart';
 import 'package:train_srilanka/Screens/Admin/admin_home.dart';
 import '../home_page.dart';
 import 'register.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class LogInScreen extends StatelessWidget {
   const LogInScreen({Key? key}) : super(key: key);
@@ -92,6 +93,7 @@ class LogInScreen extends StatelessWidget {
                   color: textColorBlue),
               child: FlatButton(
                 onPressed: () {
+                  showToast();
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => AdminHome()));
                 },
@@ -159,3 +161,10 @@ class LogInScreen extends StatelessWidget {
     );
   }
 }
+
+void showToast() => Fluttertoast.showToast(
+    msg: "Admin Login Successfull",
+    fontSize: 18,
+    backgroundColor: Colors.lightGreenAccent);
+
+void cancelToast() => Fluttertoast.cancel();

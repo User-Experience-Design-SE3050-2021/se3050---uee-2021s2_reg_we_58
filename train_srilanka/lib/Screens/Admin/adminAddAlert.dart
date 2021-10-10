@@ -9,6 +9,7 @@ import 'package:intl/intl.dart';
 import '../../theme.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 import 'package:date_field/date_field.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class AdminAddAlert extends StatefulWidget {
   const AdminAddAlert({Key? key}) : super(key: key);
@@ -131,7 +132,9 @@ class _MyStatefulWidgetState extends State<AdminAddAlert> {
                             // Validate will return true if the form is valid, or false if
                             // the form is invalid.
                             if (_formKey.currentState!.validate()) {
-                              // Process data.
+                              showToastSuccess();
+                            } else {
+                              showToastError();
                             }
                           },
                           child: const Text('Add Alert'),
@@ -142,3 +145,13 @@ class _MyStatefulWidgetState extends State<AdminAddAlert> {
             ])));
   }
 }
+
+void showToastSuccess() => Fluttertoast.showToast(
+    msg: "Alert Succesfully Submited",
+    fontSize: 18,
+    backgroundColor: Colors.greenAccent);
+
+void showToastError() => Fluttertoast.showToast(
+    msg: "Alert Submission Error", fontSize: 18, backgroundColor: Colors.red);
+
+void cancelToast() => Fluttertoast.cancel();

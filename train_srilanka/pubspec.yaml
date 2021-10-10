@@ -16,6 +16,7 @@ dependencies:
   intl: ^0.17.0
   syncfusion_flutter_datepicker: ^19.3.44
   date_field: ^2.1.2
+  fluttertoast: ^8.0.8
 
 dev_dependencies:
   flutter_test:
