@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.transparent,
       elevation: 3.0,
       title: Text(
-        'Trains Sri Lanka',
+        'TRAINS SRI LANKA',
         style: TextStyle(
             fontSize: 18, fontWeight: FontWeight.bold, color: kPrimaryColor),
       ),

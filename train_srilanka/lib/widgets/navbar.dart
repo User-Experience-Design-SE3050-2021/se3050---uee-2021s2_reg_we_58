@@ -4,6 +4,7 @@ import 'package:train_srilanka/Screens/UserAuth/profile.dart';
 import 'package:train_srilanka/Screens/UserAuth/register.dart';
 import 'package:train_srilanka/Screens/alerts.dart';
 import 'package:train_srilanka/Screens/favourite.dart';
+import 'package:train_srilanka/Screens/home_page.dart';
 import 'package:train_srilanka/Screens/search_history.dart';
 import 'package:train_srilanka/Screens/search_resaults.dart';
 import 'package:train_srilanka/Screens/settings.dart';
@@ -39,8 +40,8 @@ class NavDrawer extends StatelessWidget {
             title: Text('Home'),
             onTap: () => {
               Navigator.of(context).pop(),
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SearchResault()))
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Homepage()))
             },
           ),
           ListTile(

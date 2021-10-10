@@ -131,7 +131,7 @@ class LogInScreen extends StatelessWidget {
             //   ),
             // ),
             SizedBox(
-              height: 80.0,
+              height: 60.0,
             ),
             Container(
               // padding: EdgeInsets.only(top: 100),
@@ -153,8 +153,8 @@ class LogInScreen extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 50.0),
-              height: MediaQuery.of(context).size.height / 10,
+              margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 50.0),
+              height: MediaQuery.of(context).size.height / 12,
               decoration: BoxDecoration(
                   image:
                       DecorationImage(image: AssetImage('Assets/footer.png'))),
