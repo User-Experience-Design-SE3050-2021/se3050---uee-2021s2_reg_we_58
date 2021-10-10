@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:train_srilanka/Screens/station_shedule.dart';
 import 'package:train_srilanka/Screens/train_shedule.dart';
 import 'package:train_srilanka/theme.dart';
 import 'package:train_srilanka/widgets/navbar.dart';
@@ -102,9 +103,9 @@ class SearchResault extends StatelessWidget {
                     color: Colors.black,
                     size: 35.0,
                   ),
-                  title: Text('Yal Devi (Kankasanthurai)'),
+                  title: Text('AC - Intercity (Kankasanthurai)'),
                   // subtitle: Text('In : Colombo Fort '),
-                  trailing: Icon(Icons.more_vert),
+                  // trailing: Icon(Icons.more_vert),
                   onTap: () => {
                     Navigator.of(context).pop(),
                     Navigator.push(
@@ -188,34 +189,44 @@ class SearchResault extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     ),
-                    PopupMenuButton(
-                      icon: Icon(Icons.more_vert),
-                      itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-                        const PopupMenuItem(
-                          child: ListTile(
-                            leading: Icon(Icons.train),
-                            title: Text('View Train Schedule'),
-                            // onTap: () => {
-                            //   Navigator.of(context).pop(),
-                            //   Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //           builder: (context) => SearchResault()))
-                            // },
+                    Container(
+                      child: PopupMenuButton(
+                        icon: Icon(Icons.more_vert),
+                        itemBuilder: (BuildContext context) => <PopupMenuEntry>[
+                          PopupMenuItem(
+                            child: ListTile(
+                              leading: Icon(Icons.train),
+                              title: Text('View Train Schedule'),
+                              onTap: () {
+                                Navigator.of(context).pop();
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => TrainShedule()));
+                              },
+                            ),
                           ),
-                        ),
-                        const PopupMenuDivider(),
-                        const PopupMenuItem(
-                          child: ListTile(
-                            leading: Icon(Icons.account_balance),
-                            title: Text('View Station Schedule'),
+                          const PopupMenuDivider(),
+                          PopupMenuItem(
+                            child: ListTile(
+                              leading: Icon(Icons.account_balance),
+                              title: Text('View Train Schedule'),
+                              onTap: () {
+                                Navigator.of(context).pop();
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            StationShedule()));
+                              },
+                            ),
                           ),
-                        ),
-                        // const PopupMenuItem(
-                        //   child: Text('Item A'),
-                        // ),
-                        // const PopupMenuItem(child: Text('Item B')),
-                      ],
+                          // const PopupMenuItem(
+                          //   child: Text('Item A'),
+                          // ),
+                          // const PopupMenuItem(child: Text('Item B')),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -275,9 +286,9 @@ class SearchResault extends StatelessWidget {
                     color: Colors.black,
                     size: 35.0,
                   ),
-                  title: Text('Yal Devi (Kankasanthurai)'),
+                  title: Text('Uttara Devi (Kankasanthurai)'),
                   // subtitle: Text('In : Colombo Fort '),
-                  trailing: Icon(Icons.more_vert),
+                  // trailing: Icon(Icons.more_vert),
                   onTap: () => {
                     Navigator.of(context).pop(),
                     Navigator.push(
@@ -332,34 +343,44 @@ class SearchResault extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     ),
-                    PopupMenuButton(
-                      icon: Icon(Icons.more_vert),
-                      itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-                        const PopupMenuItem(
-                          child: ListTile(
-                            leading: Icon(Icons.train),
-                            title: Text('View Train Schedule'),
-                            // onTap: () => {
-                            //   Navigator.of(context).pop(),
-                            //   Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //           builder: (context) => SearchResault()))
-                            // },
+                    Container(
+                      child: PopupMenuButton(
+                        icon: Icon(Icons.more_vert),
+                        itemBuilder: (BuildContext context) => <PopupMenuEntry>[
+                          PopupMenuItem(
+                            child: ListTile(
+                              leading: Icon(Icons.train),
+                              title: Text('View Train Schedule'),
+                              onTap: () {
+                                Navigator.of(context).pop();
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => TrainShedule()));
+                              },
+                            ),
                           ),
-                        ),
-                        const PopupMenuDivider(),
-                        const PopupMenuItem(
-                          child: ListTile(
-                            leading: Icon(Icons.account_balance),
-                            title: Text('View Station Schedule'),
+                          const PopupMenuDivider(),
+                          PopupMenuItem(
+                            child: ListTile(
+                              leading: Icon(Icons.account_balance),
+                              title: Text('View Train Schedule'),
+                              onTap: () {
+                                Navigator.of(context).pop();
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            StationShedule()));
+                              },
+                            ),
                           ),
-                        ),
-                        // const PopupMenuItem(
-                        //   child: Text('Item A'),
-                        // ),
-                        // const PopupMenuItem(child: Text('Item B')),
-                      ],
+                          // const PopupMenuItem(
+                          //   child: Text('Item A'),
+                          // ),
+                          // const PopupMenuItem(child: Text('Item B')),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -419,9 +440,9 @@ class SearchResault extends StatelessWidget {
                     color: Colors.black,
                     size: 35.0,
                   ),
-                  title: Text('Yal Devi (Kankasanthurai)'),
+                  title: Text('Sri Devi (Kankasanthurai)'),
                   // subtitle: Text('In : Colombo Fort '),
-                  trailing: Icon(Icons.more_vert),
+                  // trailing: Icon(Icons.more_vert),
                   onTap: () => {
                     Navigator.of(context).pop(),
                     Navigator.push(
@@ -476,34 +497,44 @@ class SearchResault extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     ),
-                    PopupMenuButton(
-                      icon: Icon(Icons.more_vert),
-                      itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-                        const PopupMenuItem(
-                          child: ListTile(
-                            leading: Icon(Icons.train),
-                            title: Text('View Train Schedule'),
-                            // onTap: () => {
-                            //   Navigator.of(context).pop(),
-                            //   Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //           builder: (context) => SearchResault()))
-                            // },
+                    Container(
+                      child: PopupMenuButton(
+                        icon: Icon(Icons.more_vert),
+                        itemBuilder: (BuildContext context) => <PopupMenuEntry>[
+                          PopupMenuItem(
+                            child: ListTile(
+                              leading: Icon(Icons.train),
+                              title: Text('View Train Schedule'),
+                              onTap: () {
+                                Navigator.of(context).pop();
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => TrainShedule()));
+                              },
+                            ),
                           ),
-                        ),
-                        const PopupMenuDivider(),
-                        const PopupMenuItem(
-                          child: ListTile(
-                            leading: Icon(Icons.account_balance),
-                            title: Text('View Station Schedule'),
+                          const PopupMenuDivider(),
+                          PopupMenuItem(
+                            child: ListTile(
+                              leading: Icon(Icons.account_balance),
+                              title: Text('View Train Schedule'),
+                              onTap: () {
+                                Navigator.of(context).pop();
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            StationShedule()));
+                              },
+                            ),
                           ),
-                        ),
-                        // const PopupMenuItem(
-                        //   child: Text('Item A'),
-                        // ),
-                        // const PopupMenuItem(child: Text('Item B')),
-                      ],
+                          // const PopupMenuItem(
+                          //   child: Text('Item A'),
+                          // ),
+                          // const PopupMenuItem(child: Text('Item B')),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -563,9 +594,9 @@ class SearchResault extends StatelessWidget {
                     color: Colors.black,
                     size: 35.0,
                   ),
-                  title: Text('Yal Devi (Kankasanthurai)'),
+                  title: Text('Uttara Devi (Kankasanthurai)'),
                   // subtitle: Text('In : Colombo Fort '),
-                  trailing: Icon(Icons.more_vert),
+                  // trailing: Icon(Icons.more_vert),
                   onTap: () => {
                     Navigator.of(context).pop(),
                     Navigator.push(
@@ -620,34 +651,44 @@ class SearchResault extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     ),
-                    PopupMenuButton(
-                      icon: Icon(Icons.more_vert),
-                      itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-                        const PopupMenuItem(
-                          child: ListTile(
-                            leading: Icon(Icons.train),
-                            title: Text('View Train Schedule'),
-                            // onTap: () => {
-                            //   Navigator.of(context).pop(),
-                            //   Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //           builder: (context) => SearchResault()))
-                            // },
+                    Container(
+                      child: PopupMenuButton(
+                        icon: Icon(Icons.more_vert),
+                        itemBuilder: (BuildContext context) => <PopupMenuEntry>[
+                          PopupMenuItem(
+                            child: ListTile(
+                              leading: Icon(Icons.train),
+                              title: Text('View Train Schedule'),
+                              onTap: () {
+                                Navigator.of(context).pop();
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => TrainShedule()));
+                              },
+                            ),
                           ),
-                        ),
-                        const PopupMenuDivider(),
-                        const PopupMenuItem(
-                          child: ListTile(
-                            leading: Icon(Icons.account_balance),
-                            title: Text('View Station Schedule'),
+                          const PopupMenuDivider(),
+                          PopupMenuItem(
+                            child: ListTile(
+                              leading: Icon(Icons.account_balance),
+                              title: Text('View Train Schedule'),
+                              onTap: () {
+                                Navigator.of(context).pop();
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            StationShedule()));
+                              },
+                            ),
                           ),
-                        ),
-                        // const PopupMenuItem(
-                        //   child: Text('Item A'),
-                        // ),
-                        // const PopupMenuItem(child: Text('Item B')),
-                      ],
+                          // const PopupMenuItem(
+                          //   child: Text('Item A'),
+                          // ),
+                          // const PopupMenuItem(child: Text('Item B')),
+                        ],
+                      ),
                     ),
                   ],
                 ),
