@@ -76,6 +76,7 @@ class LogInScreen extends StatelessWidget {
                   color: textColorBlue),
               child: FlatButton(
                 onPressed: () {
+                  showToast1();
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Homepage()));
                 },
@@ -172,3 +173,8 @@ void showToast() => Fluttertoast.showToast(
     backgroundColor: Colors.lightGreenAccent);
 
 void cancelToast() => Fluttertoast.cancel();
+
+void showToast1() => Fluttertoast.showToast(
+    msg: "Login Successfull",
+    fontSize: 18,
+    backgroundColor: Colors.lightGreenAccent);

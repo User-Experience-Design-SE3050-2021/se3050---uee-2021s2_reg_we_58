@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:train_srilanka/Screens/search_history.dart';
 import 'package:train_srilanka/Screens/search_resaults.dart';
 import 'package:train_srilanka/widgets/custome_appbar.dart';
 import 'package:train_srilanka/widgets/navbar.dart';
