@@ -153,8 +153,8 @@ class LogInScreen extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 50.0),
-              height: MediaQuery.of(context).size.height / 15,
+              margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 50.0),
+              height: MediaQuery.of(context).size.height / 12,
               decoration: BoxDecoration(
                   image:
                       DecorationImage(image: AssetImage('Assets/footer.png'))),

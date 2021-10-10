@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/Screens/train_shedule.dart';
 import 'package:train_srilanka/theme.dart';
+import 'package:train_srilanka/widgets/custome_appbar.dart';
 import 'package:train_srilanka/widgets/navbar.dart';
 
 import 'UserAuth/register.dart';
@@ -10,9 +11,7 @@ class Alerts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('TRAINS SRI LANKA'),
-      ),
+      appBar: CustomAppBar(),
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
           child: Column(

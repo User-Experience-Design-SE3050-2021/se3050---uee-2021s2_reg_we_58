@@ -26,9 +26,7 @@ class AdminHome extends StatelessWidget {
 
     return Scaffold(
         drawer: adminNavDrawer(),
-        appBar: AppBar(
-          title: Text('TRAINS SRI LANKA'),
-        ),
+        appBar: CustomAppBar(),
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
             padding: const EdgeInsets.only(top: 10, left: 20, right: 20),

@@ -25,9 +25,7 @@ class _MyStatefulWidgetState extends State<AdminAddAlert> {
   Widget build(BuildContext context) {
     return Scaffold(
         drawer: adminNavDrawer(),
-        appBar: AppBar(
-          title: Text('TRAINS SRI LANKA'),
-        ),
+        appBar: CustomAppBar(),
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
             padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
