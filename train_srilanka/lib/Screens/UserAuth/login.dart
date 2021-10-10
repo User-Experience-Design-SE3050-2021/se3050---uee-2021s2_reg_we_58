@@ -100,7 +100,7 @@ class LogInScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => AdminHome()));
                 },
                 child: Text(
-                  'Admin Login',
+                  'ADMIN LOGIN',
                   style: textButton,
                 ),
               ),

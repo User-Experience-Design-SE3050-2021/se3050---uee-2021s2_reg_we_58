@@ -5,6 +5,7 @@ import 'package:train_srilanka/Screens/trip/view_trip_planner.dart';
 import 'package:train_srilanka/theme.dart';
 import 'package:train_srilanka/widgets/custome_appbar.dart';
 import 'package:train_srilanka/widgets/navbar.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import '../UserAuth/register.dart';
 import '../home_page.dart';
@@ -189,6 +190,7 @@ class AddTrip extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10), color: textColorBlue),
             child: FlatButton(
               onPressed: () {
+                showToast();
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ViewTrip()));
               },
@@ -203,3 +205,8 @@ class AddTrip extends StatelessWidget {
     );
   }
 }
+
+void showToast() => Fluttertoast.showToast(
+    msg: "Trip Added", fontSize: 18, backgroundColor: Colors.lightGreenAccent);
+
+void cancelToast() => Fluttertoast.cancel();
