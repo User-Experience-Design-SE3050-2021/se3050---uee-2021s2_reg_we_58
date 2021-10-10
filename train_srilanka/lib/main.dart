@@ -23,6 +23,6 @@ class MyApp extends StatelessWidget {
         // home: LandingPage(
         //   title: 'Train Sri Lanka',
         // ));
-        home: AdminHome());
+        home: LogInScreen());
   }
 }
