@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/theme.dart';
+import 'package:train_srilanka/widgets/custome_appbar.dart';
 import 'package:train_srilanka/widgets/navbar.dart';
 
 import 'UserAuth/register.dart';
@@ -9,9 +10,7 @@ class TrainShedule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('TRAINS SRI LANKA'),
-      ),
+      appBar: CustomAppBar(),
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
           child: Column(
@@ -22,6 +21,7 @@ class TrainShedule extends StatelessWidget {
           Container(
             height: 100,
             width: 480,
+            padding: EdgeInsets.all(10),
             margin: EdgeInsets.all(5),
             color: textColorBlue,
             child: ListTile(

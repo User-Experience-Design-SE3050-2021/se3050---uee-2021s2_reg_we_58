@@ -20,7 +20,7 @@ class LogInScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(
-              height: 180.0,
+              height: 140.0,
             ),
             Text(
               'LOGIN',
@@ -99,7 +99,7 @@ class LogInScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => AdminHome()));
                 },
                 child: Text(
-                  'Admin Login',
+                  'ADMIN LOGIN',
                   style: textButton,
                 ),
               ),
@@ -131,7 +131,7 @@ class LogInScreen extends StatelessWidget {
             //   ),
             // ),
             SizedBox(
-              height: 80.0,
+              height: 40.0,
             ),
             Container(
               // padding: EdgeInsets.only(top: 100),
@@ -154,7 +154,7 @@ class LogInScreen extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 50.0),
-              height: MediaQuery.of(context).size.height / 10,
+              height: MediaQuery.of(context).size.height / 15,
               decoration: BoxDecoration(
                   image:
                       DecorationImage(image: AssetImage('Assets/footer.png'))),
