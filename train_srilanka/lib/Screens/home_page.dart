@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:train_srilanka/Screens/search_resaults.dart';
@@ -17,6 +18,9 @@ class _HomepageState extends State<Homepage> {
     textStyle: const TextStyle(fontSize: 20, backgroundColor: kPrimaryColor),
   );
 
+  DateTime selectedDate = DateTime.now();
+  TimeOfDay selectedTime = TimeOfDay.now();
+
   bool viewVisible = false;
 
   void handleWidgets() {
@@ -29,6 +33,27 @@ class _HomepageState extends State<Homepage> {
         viewVisible = true;
       });
     }
+  }
+
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+        context: context,
+        initialDate: selectedDate,
+        firstDate: DateTime(2015, 8),
+        lastDate: DateTime(2101));
+    if (picked != null && picked != selectedDate)
+      setState(() {
+        selectedDate = picked;
+      });
+  }
+
+  Future<void> _selectTime(BuildContext context) async {
+    final TimeOfDay? picked =
+        await showTimePicker(context: context, initialTime: selectedTime);
+    if (picked != null && picked != selectedTime)
+      setState(() {
+        selectedTime = picked;
+      });
   }
 
   @override
@@ -137,50 +162,64 @@ class _HomepageState extends State<Homepage> {
             maintainAnimation: true,
             maintainState: true,
             visible: viewVisible,
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Container(
-                    margin:
-                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                        child: TextField(
-                          decoration: InputDecoration(
-                              border: InputBorder.none, hintText: 'Date'),
-                          keyboardType: TextInputType.emailAddress,
-                          textInputAction: TextInputAction.next,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin:
-                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                        child: TextField(
-                          decoration: InputDecoration(
-                              border: InputBorder.none, hintText: 'Time'),
-                          keyboardType: TextInputType.emailAddress,
-                          textInputAction: TextInputAction.next,
-                        ),
-                      ),
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.start, children: <
+                    Widget>[
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          suffixIcon: IconButton(
+                            onPressed: () => _selectDate(context),
+                            icon: Icon(
+                              Icons.calendar_today,
+                              color: kZambeziColor,
+                            ),
+                          ),
+                          hintText: "${selectedDate.toLocal()}".split(' ')[0]),
+                      keyboardType: TextInputType.emailAddress,
+                      textInputAction: TextInputAction.next,
                     ),
                   ),
-                ]),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          suffixIcon: IconButton(
+                            onPressed: () => _selectTime(context),
+                            icon: Icon(
+                              Icons.access_time_filled,
+                              color: kZambeziColor,
+                            ),
+                          ),
+                          hintText: selectedTime.format(context)),
+                      keyboardType: TextInputType.emailAddress,
+                      textInputAction: TextInputAction.next,
+                    ),
+                  ),
+                ),
+              ),
+            ]),
           ),
           Container(
             margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
