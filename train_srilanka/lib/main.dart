@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:train_srilanka/Screens/Admin/admin_home.dart';
 import 'package:train_srilanka/Screens/UserAuth/register.dart';
 import 'Screens/Landing Screen/landing_page.dart';
 import 'Screens/UserAuth/login.dart';
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,

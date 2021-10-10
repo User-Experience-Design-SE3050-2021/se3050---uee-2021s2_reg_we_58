@@ -46,7 +46,28 @@ class RegScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: TextField(
                     decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Password'),
+                        border: InputBorder.none, hintText: 'Full Name'),
+                    obscureText: true,
+                    style: subTitle,
+                    keyboardType: TextInputType.name,
+                    textInputAction: TextInputAction.next,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0),
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        border: InputBorder.none, hintText: 'Email'),
                     obscureText: true,
                     style: subTitle,
                     keyboardType: TextInputType.name,
@@ -88,7 +109,7 @@ class RegScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: TextField(
                     decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Password'),
+                        border: InputBorder.none, hintText: 'Mobile'),
                     obscureText: true,
                     style: subTitle,
                     keyboardType: TextInputType.name,
@@ -109,28 +130,7 @@ class RegScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: TextField(
                     decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Password'),
-                    obscureText: true,
-                    style: subTitle,
-                    keyboardType: TextInputType.name,
-                    textInputAction: TextInputAction.next,
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0),
-              height: 50,
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Password'),
+                        border: InputBorder.none, hintText: 'City'),
                     obscureText: true,
                     style: subTitle,
                     keyboardType: TextInputType.name,
@@ -161,22 +161,25 @@ class RegScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                Text("Already have an account?"),
+                Text("Already have an account? "),
                 Padding(
-                  padding: const EdgeInsets.only(right: 20.0),
-                  child: Text(" Log in",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16,
-                      )),
-                ),
+                    padding: const EdgeInsets.only(right: 30.0),
+                    child: TextButton(
+                      child: Text('Log in'),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LogInScreen()));
+                      },
+                    )),
               ],
             ),
             SizedBox(
               height: 30,
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 0),
+              // margin: EdgeInsets.symmetric(vertical: 0.0, horizontal: 0),
               height: MediaQuery.of(context).size.height / 12,
               decoration: BoxDecoration(
                   image:
