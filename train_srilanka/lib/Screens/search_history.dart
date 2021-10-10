@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:train_srilanka/Screens/train_shedule.dart';
 import 'package:train_srilanka/theme.dart';
 import 'package:train_srilanka/widgets/navbar.dart';
 
 import 'UserAuth/register.dart';
 import 'home_page.dart';
 
-class TrainShedule extends StatelessWidget {
+class SearchHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavDrawer(),
       appBar: AppBar(
         title: Text('TRAINS SRI LANKA'),
       ),
@@ -16,40 +18,15 @@ class TrainShedule extends StatelessWidget {
       body: SingleChildScrollView(
           child: Column(
         children: <Widget>[
-          SizedBox(
-            height: 10.0,
-          ),
-          Container(
-            height: 100,
-            width: 480,
-            margin: EdgeInsets.all(5),
-            color: textColorBlue,
-            child: ListTile(
-              title: Text(
-                'Yal Devi (Kankasanthurai)',
-                style: textButton,
-              ),
-              subtitle: Text(
-                'Available : Daily                                                                                         Classes : 1st, 2nd & 3rd ',
-                style: FButton,
-              ),
-              trailing: Icon(
-                Icons.train,
-                color: Colors.white,
-                size: 35.0,
-              ),
-              onTap: () => {
-                Navigator.of(context).pop(),
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => TrainShedule())),
-              },
-            ),
-          ),
+          // SizedBox(
+          //   height: 5.0,
+          // ),
           SizedBox(
             height: 10.0,
           ),
           Card(
-            color: kZambeziColor,
+            margin: EdgeInsets.all(10),
+            color: textColorBlue,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
@@ -62,7 +39,7 @@ class TrainShedule extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     ),
                     Text(
-                      'The train will stop at',
+                      'Search History',
                       style: textButton,
                     ),
                   ],
@@ -74,6 +51,7 @@ class TrainShedule extends StatelessWidget {
             ),
           ),
           Card(
+            margin: EdgeInsets.all(10),
             color: boxBlue2,
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -86,17 +64,24 @@ class TrainShedule extends StatelessWidget {
                     size: 35.0,
                   ),
                   title: Text(
-                    'Kankaseanthurai',
+                    'Anuradhapura Town  ->  Colombo Fort',
                     style: subTitle,
                   ),
                 ),
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 140.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
                     ),
                     Text(
-                      'Leave at : 3:45 AM',
+                      'From Tue 03/08/2021',
+                      style: TextStyle(),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    ),
+                    Text(
+                      '04:57 PM',
                       style: TextStyle(),
                     ),
                   ],
@@ -108,6 +93,7 @@ class TrainShedule extends StatelessWidget {
             ),
           ),
           Card(
+            margin: EdgeInsets.all(10),
             color: boxBlue2,
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -120,7 +106,7 @@ class TrainShedule extends StatelessWidget {
                     size: 35.0,
                   ),
                   title: Text(
-                    'Jaffna',
+                    'Colombo Fort  -> Anuradhapura Town  ',
                     style: subTitle,
                   ),
                 ),
@@ -130,14 +116,14 @@ class TrainShedule extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 40.0),
                     ),
                     Text(
-                      'Arrive at : 4:00 AM',
+                      'From Tue 03/08/2021',
                       style: TextStyle(),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     ),
                     Text(
-                      'Leave at : 4:05 AM',
+                      '03:27 PM',
                       style: TextStyle(),
                     ),
                   ],
@@ -149,6 +135,7 @@ class TrainShedule extends StatelessWidget {
             ),
           ),
           Card(
+            margin: EdgeInsets.all(10),
             color: boxBlue2,
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -161,7 +148,7 @@ class TrainShedule extends StatelessWidget {
                     size: 35.0,
                   ),
                   title: Text(
-                    'Kodimam',
+                    'Colombo Fort  -> Matara  ',
                     style: subTitle,
                   ),
                 ),
@@ -171,14 +158,14 @@ class TrainShedule extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 40.0),
                     ),
                     Text(
-                      'Arrive at : 4:22 AM',
+                      'From Sun 01/08/2021',
                       style: TextStyle(),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     ),
                     Text(
-                      'Leave at : 4:23 AM',
+                      '03:21 PM',
                       style: TextStyle(),
                     ),
                   ],
@@ -190,6 +177,7 @@ class TrainShedule extends StatelessWidget {
             ),
           ),
           Card(
+            margin: EdgeInsets.all(10),
             color: boxBlue2,
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -202,7 +190,7 @@ class TrainShedule extends StatelessWidget {
                     size: 35.0,
                   ),
                   title: Text(
-                    'Vavuniya',
+                    'Colombo Fort -> Badulla ',
                     style: subTitle,
                   ),
                 ),
@@ -212,96 +200,14 @@ class TrainShedule extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 40.0),
                     ),
                     Text(
-                      'Arrive at : 4:51 AM',
+                      'From Tue 03/09/2021    ',
                       style: TextStyle(),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     ),
                     Text(
-                      'Leave at : 4:53 AM',
-                      style: TextStyle(),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-              ],
-            ),
-          ),
-          Card(
-            color: boxBlue2,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                ListTile(
-                  // tileColor: boxBlue2,
-                  leading: Icon(
-                    Icons.train,
-                    color: Colors.black,
-                    size: 35.0,
-                  ),
-                  title: Text(
-                    'Medawachchiya',
-                    style: subTitle,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                    ),
-                    Text(
-                      'Arrive at : 5:49 AM',
-                      style: TextStyle(),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                    ),
-                    Text(
-                      'Leave at : 5:50 AM',
-                      style: TextStyle(),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-              ],
-            ),
-          ),
-          Card(
-            color: boxBlue2,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                ListTile(
-                  // tileColor: boxBlue2,
-                  leading: Icon(
-                    Icons.train,
-                    color: Colors.black,
-                    size: 35.0,
-                  ),
-                  title: Text(
-                    'Anuradhapura',
-                    style: subTitle,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                    ),
-                    Text(
-                      'Arrive at : 6:44 AM',
-                      style: TextStyle(),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                    ),
-                    Text(
-                      'Leave at : 6:50 AM',
+                      '04:57 PM',
                       style: TextStyle(),
                     ),
                   ],
