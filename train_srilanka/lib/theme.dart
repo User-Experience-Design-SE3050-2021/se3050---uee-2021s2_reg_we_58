@@ -11,6 +11,8 @@ const textColorBlue = Color(0xff0a8bc2);
 const textColorBlack = Color(0xff000000);
 const boxBlue = Color(0xFFB3E5FC);
 const boxBlue2 = Color(0xFFBBDEFB);
+const alertRed = Color(0xFFcc240a);
+const alertGray = Color(0xFFdbd4d3);
 
 const kDefaultPadding = EdgeInsets.symmetric(horizontal: 30);
 

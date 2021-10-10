@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:train_srilanka/Screens/Admin/admin_home.dart';
 import 'package:train_srilanka/Screens/UserAuth/register.dart';
 import 'Screens/Landing Screen/landing_page.dart';
 import 'Screens/UserAuth/login.dart';
@@ -22,6 +23,6 @@ class MyApp extends StatelessWidget {
         // home: LandingPage(
         //   title: 'Train Sri Lanka',
         // ));
-        home: LogInScreen());
+        home: AdminHome());
   }
 }
