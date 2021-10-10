@@ -9,6 +9,7 @@ import 'package:train_srilanka/widgets/navbar.dart';
 
 import '../UserAuth/register.dart';
 import '../home_page.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class ViewTrip extends StatelessWidget {
   @override
@@ -316,6 +317,7 @@ class ViewTrip extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10), color: Colors.red),
                 child: FlatButton(
                   onPressed: () {
+                    showToast();
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => TripPlanner()));
                   },
@@ -351,3 +353,8 @@ class ViewTrip extends StatelessWidget {
     );
   }
 }
+
+void showToast() => Fluttertoast.showToast(
+    msg: "Trip Deleted", fontSize: 18, backgroundColor: Colors.redAccent);
+
+void cancelToast() => Fluttertoast.cancel();
