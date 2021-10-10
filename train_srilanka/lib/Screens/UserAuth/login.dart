@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/theme.dart';
 import 'package:train_srilanka/widgets/navbar.dart';
-
+import 'package:train_srilanka/Screens/Admin/admin_home.dart';
 import '../home_page.dart';
 import 'register.dart';
 
@@ -31,7 +31,7 @@ class LogInScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(10),
-              ), 
+              ),
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -83,6 +83,24 @@ class LogInScreen extends StatelessWidget {
                 ),
               ),
             ),
+            Container(
+              height: 50,
+              width: 400,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: textColorBlue),
+              child: FlatButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AdminHome()));
+                },
+                child: Text(
+                  'Admin Login',
+                  style: textButton,
+                ),
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               mainAxisSize: MainAxisSize.max,
@@ -98,6 +116,7 @@ class LogInScreen extends StatelessWidget {
                 ),
               ],
             ),
+
             // Flexible(
             //   flex: 4,
             //   child: Container(

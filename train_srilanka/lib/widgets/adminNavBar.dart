@@ -5,6 +5,7 @@ import 'package:train_srilanka/Screens/search_resaults.dart';
 import 'package:train_srilanka/Screens/station_shedule.dart';
 import 'package:train_srilanka/Screens/train_shedule.dart';
 import 'package:train_srilanka/Screens/Admin/adminAlerts.dart';
+import 'package:train_srilanka/Screens/Admin/admin_home.dart';
 
 class adminNavDrawer extends StatelessWidget {
   @override
@@ -34,8 +35,8 @@ class adminNavDrawer extends StatelessWidget {
             title: Text('Home'),
             onTap: () => {
               Navigator.of(context).pop(),
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SearchResault()))
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => AdminHome()))
             },
           ),
           ListTile(

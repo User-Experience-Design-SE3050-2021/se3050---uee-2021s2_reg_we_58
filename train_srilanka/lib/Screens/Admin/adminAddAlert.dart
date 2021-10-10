@@ -10,22 +10,18 @@ import '../../theme.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 import 'package:date_field/date_field.dart';
 
-class AdminAddAlert extends StatelessWidget {
-  DateTime? _dateTime;
+class AdminAddAlert extends StatefulWidget {
+  const AdminAddAlert({Key? key}) : super(key: key);
+
+  @override
+  State<AdminAddAlert> createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<AdminAddAlert> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-    DateTime now = DateTime.now();
-    String dropDownValue = 'Select Date';
-    var items = [
-      'Select Date',
-      'Platform 01',
-      'Platform 02',
-      'Platform 03',
-      'Platform 04',
-      'Platform 05'
-    ];
-
     return Scaffold(
         drawer: adminNavDrawer(),
         appBar: AppBar(
@@ -46,6 +42,103 @@ class AdminAddAlert extends StatelessWidget {
                   ),
                 ],
               ),
+              Form(
+                  key: _formKey,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: 'Alert Code',
+                        ),
+                        validator: (String? value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter Alert Code';
+                          }
+                          return null;
+                        },
+                      ),
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: 'Alert Type',
+                        ),
+                        validator: (String? value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter Alert Type';
+                          }
+                          return null;
+                        },
+                      ),
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: 'Alert Name',
+                        ),
+                        validator: (String? value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter Alert Name';
+                          }
+                          return null;
+                        },
+                      ),
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: 'Alert Description',
+                        ),
+                        validator: (String? value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter Alert Description';
+                          }
+                          return null;
+                        },
+                      ),
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: 'Publish Date',
+                        ),
+                        validator: (String? value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please Select Publish Date';
+                          }
+                          return null;
+                        },
+                      ),
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: 'Time',
+                        ),
+                        validator: (String? value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter Time';
+                          }
+                          return null;
+                        },
+                      ),
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: 'Train',
+                        ),
+                        validator: (String? value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter Train';
+                          }
+                          return null;
+                        },
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 16.0),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            // Validate will return true if the form is valid, or false if
+                            // the form is invalid.
+                            if (_formKey.currentState!.validate()) {
+                              // Process data.
+                            }
+                          },
+                          child: const Text('Add Alert'),
+                        ),
+                      ),
+                    ],
+                  ))
             ])));
   }
 }
