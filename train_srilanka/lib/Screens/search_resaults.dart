@@ -26,7 +26,7 @@ class SearchResault extends StatelessWidget {
             width: 480,
             margin: const EdgeInsets.all(5.0),
             child: Card(
-              color: textColorBlue,
+              color: kPrimaryColor,
               margin: EdgeInsets.all(5),
               elevation: 7.0,
               child: Column(children: [
@@ -102,7 +102,10 @@ class SearchResault extends StatelessWidget {
                     color: Colors.black,
                     size: 35.0,
                   ),
-                  title: Text('AC - Intercity (Kankasanthurai)'),
+                  title: Text(
+                    'AC - Intercity (Kankasanthurai)',
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   // subtitle: Text('In : Colombo Fort '),
                   // trailing: Icon(Icons.more_vert),
                   onTap: () => {
@@ -209,7 +212,7 @@ class SearchResault extends StatelessWidget {
                           PopupMenuItem(
                             child: ListTile(
                               leading: Icon(Icons.account_balance),
-                              title: Text('View Train Schedule'),
+                              title: Text('View Station Schedule'),
                               onTap: () {
                                 Navigator.of(context).pop();
                                 Navigator.push(
@@ -285,7 +288,10 @@ class SearchResault extends StatelessWidget {
                     color: Colors.black,
                     size: 35.0,
                   ),
-                  title: Text('Uttara Devi (Kankasanthurai)'),
+                  title: Text(
+                    'Uttara Devi (Kankasanthurai)',
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   // subtitle: Text('In : Colombo Fort '),
                   // trailing: Icon(Icons.more_vert),
                   onTap: () => {
@@ -363,7 +369,7 @@ class SearchResault extends StatelessWidget {
                           PopupMenuItem(
                             child: ListTile(
                               leading: Icon(Icons.account_balance),
-                              title: Text('View Train Schedule'),
+                              title: Text('View Station Schedule'),
                               onTap: () {
                                 Navigator.of(context).pop();
                                 Navigator.push(
@@ -439,7 +445,10 @@ class SearchResault extends StatelessWidget {
                     color: Colors.black,
                     size: 35.0,
                   ),
-                  title: Text('Sri Devi (Kankasanthurai)'),
+                  title: Text(
+                    'Sri Devi (Kankasanthurai)',
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   // subtitle: Text('In : Colombo Fort '),
                   // trailing: Icon(Icons.more_vert),
                   onTap: () => {
@@ -517,7 +526,7 @@ class SearchResault extends StatelessWidget {
                           PopupMenuItem(
                             child: ListTile(
                               leading: Icon(Icons.account_balance),
-                              title: Text('View Train Schedule'),
+                              title: Text('View Station Schedule'),
                               onTap: () {
                                 Navigator.of(context).pop();
                                 Navigator.push(
@@ -593,7 +602,10 @@ class SearchResault extends StatelessWidget {
                     color: Colors.black,
                     size: 35.0,
                   ),
-                  title: Text('Uttara Devi (Kankasanthurai)'),
+                  title: Text(
+                    'Uttara Devi (Kankasanthurai)',
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   // subtitle: Text('In : Colombo Fort '),
                   // trailing: Icon(Icons.more_vert),
                   onTap: () => {
@@ -671,7 +683,7 @@ class SearchResault extends StatelessWidget {
                           PopupMenuItem(
                             child: ListTile(
                               leading: Icon(Icons.account_balance),
-                              title: Text('View Train Schedule'),
+                              title: Text('View Station Schedule'),
                               onTap: () {
                                 Navigator.of(context).pop();
                                 Navigator.push(

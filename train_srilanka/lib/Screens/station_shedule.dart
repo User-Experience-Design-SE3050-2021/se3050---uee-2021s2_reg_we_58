@@ -20,7 +20,7 @@ class StationShedule extends StatelessWidget {
             height: 10.0,
           ),
           Container(
-            height: 100,
+            height: 75,
             width: 480,
             margin: EdgeInsets.all(5),
             color: textColorBlue,

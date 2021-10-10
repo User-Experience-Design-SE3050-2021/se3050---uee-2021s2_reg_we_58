@@ -21,6 +21,7 @@ class TrainShedule extends StatelessWidget {
           Container(
             height: 100,
             width: 480,
+            padding: EdgeInsets.all(10),
             margin: EdgeInsets.all(5),
             color: textColorBlue,
             child: ListTile(
