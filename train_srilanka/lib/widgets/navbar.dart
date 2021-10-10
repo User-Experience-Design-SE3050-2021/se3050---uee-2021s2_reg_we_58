@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:train_srilanka/Screens/UserAuth/login.dart';
+import 'package:train_srilanka/Screens/UserAuth/profile.dart';
 import 'package:train_srilanka/Screens/UserAuth/register.dart';
+import 'package:train_srilanka/Screens/alerts.dart';
 import 'package:train_srilanka/Screens/favourite.dart';
 import 'package:train_srilanka/Screens/search_history.dart';
 import 'package:train_srilanka/Screens/search_resaults.dart';
+import 'package:train_srilanka/Screens/settings.dart';
 import 'package:train_srilanka/Screens/station_shedule.dart';
 import 'package:train_srilanka/Screens/train_shedule.dart';
 import 'package:train_srilanka/Screens/trip/trip_planner.dart';
@@ -43,7 +46,16 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.account_balance),
             title: Text('Alerts'),
-            onTap: () => {Navigator.of(context).pop()},
+            trailing: Icon(
+              Icons.perm_device_information,
+              color: Colors.red,
+              size: 35.0,
+            ),
+            onTap: () => {
+              Navigator.of(context).pop(),
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Alerts()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.phone),
@@ -66,7 +78,11 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.person_outline),
             title: Text('Profile'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.of(context).pop(),
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Profile()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.star_rate),
@@ -105,7 +121,11 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.settings),
             title: Text('Settings'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.of(context).pop(),
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Settings()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.exit_to_app),
