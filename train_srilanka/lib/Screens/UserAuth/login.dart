@@ -12,6 +12,7 @@ class LogInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         resizeToAvoidBottomInset: false,
         body: SafeArea(
@@ -76,7 +77,7 @@ class LogInScreen extends StatelessWidget {
               child: FlatButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => RegScreen()));
+                      MaterialPageRoute(builder: (context) => Homepage()));
                 },
                 child: Text(
                   'SUBMIT',
@@ -107,15 +108,18 @@ class LogInScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                Text("New here ?   "),
+                Text("New here ? "),
                 Padding(
-                  padding: const EdgeInsets.only(right: 30.0),
-                  child: Text("Create a new account",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16,
-                      )),
-                ),
+                    padding: const EdgeInsets.only(right: 30.0),
+                    child: TextButton(
+                      child: Text('Create a new account'),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RegScreen()));
+                      },
+                    )),
               ],
             ),
 
@@ -127,7 +131,7 @@ class LogInScreen extends StatelessWidget {
             //   ),
             // ),
             SizedBox(
-              height: 120.0,
+              height: 80.0,
             ),
             Container(
               // padding: EdgeInsets.only(top: 100),
